@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "andeladeveloper",
+    "password": null,
+    "database": "population_manager",
+    "host": "localhost",
+    "dialect": "postgresql"
+  },
+  "test": {
+    "username": "andeladeveloper",
+    "password": null,
+    "database": "population_manager",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "production": {
+    "dialect": "postgres",
+    "use_env_variable": "PROD_DATABASE_URL"
+  }
+}

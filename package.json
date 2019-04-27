@@ -1,0 +1,45 @@
+{
+  "name": "population_manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ayodelevm/population_manager.git",
+  "author": "ayodelevm <ayodelevm@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "8.12.0"
+  },
+  "scripts": {
+    "start": "yarn db:migrate && babel-node server/app.js",
+    "start:dev": "nodemon --exec babel-node server/app.js",
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo:all",
+    "db:seed": "sequelize db:seed:all",
+    "test": "nyc mocha --require babel-register ./server/test --exit"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.10",
+    "nyc": "^14.0.0",
+    "pg": "^7.8.1",
+    "sequelize": "^4.42.1",
+    "sequelize-cli": "^5.4.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
+    "validator": "^10.11.0",
+    "winston": "^3.2.1"
+  }
+}
+
